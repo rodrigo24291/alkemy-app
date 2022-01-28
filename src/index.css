@@ -1,13 +1,157 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.inicio{
+  background-color: #102852;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.login{
+width: 26rem;
+  height: 22rem;
+  border: 1px black solid ;
+  border-top: 5px #0856c1 solid ;
+  background-color: #232428;
+}
+.login_title{
+  font-size: 1.4rem;
+  color: white;
+  letter-spacing: 0.5rem;
+  font-weight: 900;
+}
+.login_title_line{
+  width: 100%;
+  height: 0.1rem;
+  background-color: white;
+  display: block;
+}
+
+.login_container{
+  height: 100%;
+  width: 70%;
+
+}
+
+input{
+  width: 100%;
+}
+.input_login{
+  background-color: #16171c;
+  padding: 0.3rem;
+  outline: none;
+  border: none;
+  color: white;
+  position: absolute;
+  
+}
+
+
+
+
+input[type="submit"]{
+  padding: 0.3rem;
+  background: #0856c1;
+  color: white;
+  border: none;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+
+}
+
+.login_container-inputs{
+  width: 100%;
+  margin: 2rem 0;
+  height: 49%;
+}
+.input_containter-efect{
+position: relative;
+
+}
+.input_containter-efect_text{
+  color: white;
+  position: absolute;
+  left: 0.4rem;
+  top: 0.2rem;
+}
+
+.input_login:focus + span{
+top: -1.5rem;
+font-size: 0.8rem;
+color: blue;
+left: 0;
+transition: all 0.5s ease-out;
+
+}
+.input_login:focus{
+  border: 1px blue solid;
+}
+
+.input_login:not(:placeholder-shown) + span{
+  top: -1.5rem;
+font-size: 0.8rem;
+color: blue;
+left: 0;
+}
+
+.error{
+font-size:0.7rem;
+color:red;
+position:absolute;
+left:0;
+top:2rem
+}
+
+.contenedor-inicio{
+ 
+  background-color: #5b647457; 
+  width: 100%;
+  min-height: 30%;
+}
+.navbar{
+  background-color: #102852 !important;
+
+}
+
+.inicio_busqueda{
+
+  width: 100%;
+}
+.inicio_busqueda-title{
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.4rem;
+}
+
+.inicio_busqueda-line{
+  display: block;
+  width: 90%;
+  height: 0.1rem;
+  background-color: white;
+}
+
+.inicio_busqueda_contenedorinputs-title{
+  color: white;
+  margin-top: 0.3rem;
+}
+
+.ingre_title{
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  font-weight: 900;
+  border-bottom: 2px solid black;
+}
+.subtitle_plato{
+  font-weight: 600;
+}
+
+.incio-comidas{
+
+  background-color: #5b647457; 
+  width: 100%;
+  min-height: 100vh;
+
+}
+.alert{
+  position: fixed;
+  top:50%;
+  right: 0;
+  z-index: 100;
+  
 }
