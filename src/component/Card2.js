@@ -2,7 +2,7 @@ import React from 'react';
 import Borrar from './Borrar';
 import {Link } from "react-router-dom";
 
-export default function Card2({datas}) {
+export default function Card2({datas,setalert}) {
     const data=datas
 
   return <>
@@ -19,7 +19,7 @@ export default function Card2({datas}) {
       <p><span className='subtitle_plato'>HealthScore:</span> {data.healthScore}</p>
       <p><span className='subtitle_plato'> Tipo de plato:</span> {data.vegan==true ? 'Vegano' : data.vegetarian==true ? 'Vegetariana' : 'Carnivora' }</p>
       <Link className='btn btn-primary w-100' to={`/Receta2/${data.id}`}>VER MAS</Link>
-      <Borrar id={data}  />
+      <Borrar id={data} setalert={setalert} />
       </div> 
     
     </div>

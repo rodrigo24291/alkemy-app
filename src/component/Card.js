@@ -13,17 +13,29 @@ const handelclick=()=>{
 if(!data.vegan && comidas.carnivora.length<1 || !data.vegan && comidas.carnivora[0].id !==data.id)
  {
   dispatch(agregarcomidas(data))
+  setalerta({
+    estado:true,
+    mensaje:'Comida carnivora agregada',
+    titulo:'Exito!'
+    
+  })
+
 }
 
 else if(data.vegan && comidas.vegana.length<1 || data.vegan && comidas.vegana[0].id !==data.id)
  {
   dispatch(agregarcomidas(data))
+  setalerta({
+    estado:true,
+    mensaje:'Comida vegana agregada',
+    titulo:'Exito!'
+  })
 }
 if( data.vegan && comidas.vegana.length==2){
   setalerta({
     estado:true,
-    mensaje:'comida vegana llena'
-    
+    mensaje:'Comida vegana llena',
+    titulo:'Error'
   })
 }
 
@@ -31,8 +43,8 @@ if( data.vegan && comidas.vegana.length==2){
 if( !data.vegan && comidas.carnivora.length==2){
   setalerta({
     estado:true,
-    mensaje:'comida carnivora llena'
-    
+    mensaje:'Comida carnivora llena',
+    titulo:'Error'
   })
 }
 }
@@ -48,7 +60,7 @@ if( !data.vegan && comidas.carnivora.length==2){
     <p><span className='subtitle_plato'>Tiempo de preparacion:</span> {data.readyInMinutes}</p>
     <p><span className='subtitle_plato'>Precio:</span> {data.pricePerServing}</p>
     <p><span className='subtitle_plato'>HealthScore:</span> {data.healthScore}</p>
-    <p><span className='subtitle_plato'> Tipo de plato:</span> {data.vegan==true ? 'Vegano' : data.vegetarian==true ? 'vegetariana' : 'Carnivora' }</p> 
+    <p><span className='subtitle_plato'> Tipo de plato:</span> {data.vegan==true ? 'Vegano' : data.vegetarian==true ? 'Vegetariana' : 'Carnivora' }</p> 
     </div> 
     
     <button className='btn btn-success w-100 my-3' onClick={handelclick}>AGREGAR</button>
